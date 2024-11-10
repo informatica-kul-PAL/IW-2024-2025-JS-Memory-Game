@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+
+        <link rel="stylesheet" type="text/css" href="/jonas/stylesheet.css">
+    </head>
+
+    <body>
+        <div id="status_indicator">
+            Initialiseren...
+        </div>
+        <div class="player_card" id="player_A">
+            Player A
+            <br>
+            <span id="points_A">0</span> Points
+        </div>
+        <table id="gameboard">
+        </table>
+        <div class="player_card" id="player_B">
+            Player B
+            <br>
+            <span id="points_B">0</span> Points
+        </div>
+        <div id="level-selector">
+            <button onclick="game = new MemoryGame(PREMADE_LEVELS['Level 1'])">2x3<br>Level 1</button>
+            <button onclick="game = new MemoryGame(PREMADE_LEVELS['Level 2'])">3x4<br>Level 2</button>
+            <button onclick="game = new MemoryGame(PREMADE_LEVELS['Level 3'])">4x5<br>Level 3</button>
+            <button onclick="game = new MemoryGame(game.field)">Restart<br>current</button>
+            <button onclick="game = generate_random_game(3, 2)">2x3<br>Random</button>
+            <button onclick="game = generate_random_game(4, 3)">3x4<br>Random</button>
+            <button onclick="game = generate_random_game(5, 4)">4x5<br>Random</button>
+        </div>
+    </body>
+    <script src="code.js"></script>
+</html>
+
