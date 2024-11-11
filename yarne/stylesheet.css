@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+/*
+  Minimal CSS reset by Josh W Comeau
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+  --rows: 2;
+  --cols: 3;
+  --color-bg: #FFF;
+  --color-numbers: #F1F8FF;
+  --color-puzzle: #FFF;
+  --color-primary: #50546F;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Styles for the menu */
+.menu {
+  border-radius: 1rem;
+  background-color: var(--color-numbers);
+  min-width: 24rem;
+}
+
+.menu h1 {
+  padding: 1rem 1rem 0 1rem;
+  border-radius: 1rem 1rem 0 0;
+  background-color: var(--color-primary);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.menu > div {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.menu > div > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.menu button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out; 
+}
+
+.menu p {
+  margin-top: 3rem;
+  max-width: 24rem;
+}
+
+.menu button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+/* Styles for the memory game */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.state-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.state-container span {
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  gap: 2rem;
+  width: 60vw;
+  height: 60vh;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  background-color: var(--color-puzzle);
+  font-size: 2.5rem;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.card.flipped {
+  background-color: var(--color-primary);
+  color: #fff;
+  cursor: not-allowed;
+}
