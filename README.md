@@ -1,3 +1,7 @@
+[Oplossing Jonas](https://informatica-kul-pal.github.io/IW-2024-2025-JS-Memory-Game/jonas)
+
+[Oplossing Yarne](https://informatica-kul-pal.github.io/IW-2024-2025-JS-Memory-Game/yarne)
+
 # JavaScript project: 2024-2025
 
 In dit project implementeer je een memory game, een variant op het Concentration kaartspel, in Javascript.
